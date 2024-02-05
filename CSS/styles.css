@@ -1,0 +1,61 @@
+html{
+    background-color: #eee;
+}
+
+.linkConstructor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+p{
+    background-color: blue;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    padding: 5px;
+    cursor: pointer;
+}
+
+p:hover{
+    transform: scale(1.2);
+}
+
+
+.linkContainer{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position:static;
+}
+
+main{
+    position: relative;
+
+}
+
+.linkContainer button{
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.linkContainer button:hover{
+    transform: scale(1.2);
+}
+
+.finalLink{
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.linkContainer a:hover{
+    transform: scale(1.2);
+}
