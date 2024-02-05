@@ -14,10 +14,7 @@ function enlazar(element) {
 
 function completar(element){
     let linkContainer = document.querySelector(".finalLink");
-    linkContainer.removeAttribute("hidden")
     let button = document.querySelector("button");
-    let link = document.querySelector("a");
-    link.href+=ans;
-    link.innerHTML=ans;
+    location.href = "http://" + ans
     button.setAttribute("hidden", "");
 }
