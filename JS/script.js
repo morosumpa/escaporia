@@ -7,9 +7,24 @@ function enlazar(element) {
     button.removeAttribute("hidden", "");
     let resetButton = document.querySelector(".resetButton");
     resetButton.removeAttribute("hidden","")
-    ans+= element.innerHTML;
-    button.innerHTML=ans;
     element.setAttribute("hidden","");
+
+    if(element.src.includes("lima")){
+        ans+="www."
+    }
+    if(element.src.includes("rejas")){
+        ans+="github"
+    }
+    if(element.src.includes("pico")){
+        ans+=".com"
+    }
+    if(element.src.includes("pared")){
+        ans+="/morosumpa"
+    }
+    if(element.src.includes("agujero")){
+        ans+="/scapeMate"
+    }
+    button.innerHTML=ans;
 }
 
 function completar(element){

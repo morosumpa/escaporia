@@ -1,61 +1,95 @@
-html{
-    background-color: #eee;
+html {
+  background-color: #eee;
+  background-image: url("../image/carsel.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #666666;
 }
 
-.linkConstructor{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
+.linkConstructor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #51515189;
+  border-radius: 150px;
 }
 
-p{
-    background-color: blue;
-    border-radius: 15px;
-    color: white;
-    text-align: center;
-    width: fit-content;
-    padding: 5px;
-    cursor: pointer;
+p {
+  color: white;
+  background-color: #666666;
+  border-radius: 15px;
+  text-align: center;
+  width: fit-content;
+  padding: 5px;
+  cursor: pointer;
 }
 
-p:hover{
-    transform: scale(1.2);
+.linkContainer {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: static;
 }
 
-
-.linkContainer{
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position:static;
+main {
+  position: relative;
 }
 
-main{
-    position: relative;
-
+.linkContainer button {
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-.linkContainer button{
-    border-radius: 15px;
-    cursor: pointer;
+.linkContainer button:hover {
+  transform: scale(1.2);
 }
 
-.linkContainer button:hover{
-    transform: scale(1.2);
+.finalLink {
+  color: white;
+  text-decoration: none;
+  background-color: red;
+  border-radius: 15px;
+  padding: 5px;
 }
 
-.finalLink{
-    color: white;
-    text-decoration: none;
-    background-color: red;
-    border-radius: 15px;
-    padding: 5px;
+.linkContainer a:hover {
+  transform: scale(1.2);
 }
 
-.linkContainer a:hover{
-    transform: scale(1.2);
+h1 {
+  color: white;
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: solid white 2px;
+  border-radius: 50px;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
 }
