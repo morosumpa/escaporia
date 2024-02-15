@@ -1,6 +1,5 @@
 html {
   background-color: #eee;
-  background-image: url("../image/carsel.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #666666;
@@ -10,7 +9,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 200px;
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: #51515189;
@@ -28,7 +27,7 @@ p {
 }
 
 .linkContainer {
-  height: 100px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,14 +60,14 @@ main {
   transform: scale(1.2);
 }
 
-h1 {
+h1, .enunciado {
   color: white;
   text-align: center;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
   border: solid white 2px;
   border-radius: 50px;
@@ -92,4 +91,20 @@ img:hover {
 
 .w-100 {
   width: 100%;
+}
+
+.gax{
+  width: 160px;
+  height: 440px;
+}
+
+.gax2{
+  width: 40px;
+  height: 40px;
+  margin-top: 182px;
+  margin-left: 478px;
+}
+
+.gax:hover, .gax2:hover{
+  box-shadow: 15px 15px 15px white;
 }

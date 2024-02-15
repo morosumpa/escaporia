@@ -1,35 +1,76 @@
+"use strict"
 
+let ans = "";
+let rejas = false;
+let agujero = false;
+let pico = false;
+let lima = false;
+let pared = false;
 
-let ans="";
+let pista = document.querySelector(".pista")
+
+console.log(pista.textContent)
 
 function enlazar(element) {
-    let button = document.querySelector("button");
-    button.removeAttribute("hidden", "");
-    let resetButton = document.querySelector(".resetButton");
-    resetButton.removeAttribute("hidden","")
-    element.setAttribute("hidden","");
 
-    if(element.src.includes("lima")){
-        ans+="www."
+    if (element.src) {
+        if (element.src.includes("agujero") && pared) {
+            ans += "/scapeMate"
+            element.parentNode.parentNode.setAttribute("hidden", "");
+            window.location.href = "https://"+ans;
+        } else {
+            pista.innerHTML = ""
+        }
+
+        if (element.src.includes("pico") && rejas) {
+            ans += ".com"
+            element.parentNode.parentNode.setAttribute("hidden", "");
+            pico = true;
+        }
+
+        if (element.src.includes("lima")) {
+            ans += "www."
+            lima=true
+            element.parentNode.parentNode.setAttribute("hidden", "");
+            document.querySelector(".gax2").removeAttribute("hidden")
+            pista.innerHTML = "Has seleccionado la lima"
+        } else {
+            pista.innerHTML = ""
+        }
+
+        if (element.src.includes("pared") && pico) {
+            ans += "/morosumpa"
+            element.parentNode.parentNode.setAttribute("hidden", "");
+            pared = true;
+            document.querySelector(".agujero").removeAttribute("hidden")
+        } else {
+            pista.innerHTML = "Parece que necesitas algo para romper esa pared"
+        }
+
+        if (element.src.includes("rejas") && lima) {
+            ans += "github"
+            element.parentNode.parentNode.setAttribute("hidden", "");
+            document.querySelector(".pared").removeAttribute("hidden")
+            rejas = true;
+            background();
+        } else {
+            pista.innerHTML = "Parece que necesitas algo para romper esas rejas"
+        }
+    } else {
+        if (element.classList.contains("gax")) {
+            element.setAttribute("hidden", "");
+            pista.innerHTML = "¡Has encontrado una lima!"
+            document.querySelector(".lima").removeAttribute("hidden")
+        } else {
+            element.setAttribute("hidden", "");
+            lima = true;
+            pista.innerHTML = "¡Has encontrado un pico!"
+            document.querySelector(".pico").removeAttribute("hidden")
+        }
+
     }
-    if(element.src.includes("rejas")){
-        ans+="github"
-    }
-    if(element.src.includes("pico")){
-        ans+=".com"
-    }
-    if(element.src.includes("pared")){
-        ans+="/morosumpa"
-    }
-    if(element.src.includes("agujero")){
-        ans+="/scapeMate"
-    }
-    button.innerHTML=ans;
 }
 
-function completar(element){
-    let linkContainer = document.querySelector(".finalLink");
-    let button = document.querySelector("button");
-    location.href = "http://" + ans
-    button.setAttribute("hidden", "");
+function background() {
+    document.querySelector("html").setAttribute('style', 'background: url("image/patio.jpg");')
 }

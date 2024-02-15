@@ -1,47 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  style="background-image:  url('image/carsel.webp');">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escaporia</title>
-    <script src="JS/script.js"></script>
+
+    <script defer src="JS/script.js"></script>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
-    <main>
-        <h1>¡Escapa de la cárcel para poder continuar tu camino!</h1>
-        <h1>Selecciona los elementos en el orden correcto para escapar</h1>
+    <main class="d-flex">
+        <h3 class="enunciado pista">¡Escapa de la cárcel para poder continuar tu camino!</h3>
+        <h4 class="enunciado">Inventario:</h4>
         <div class="linkConstructor">
-            <div class="d-flex justify-content-center align-center">
-                <img src="image/agujero.webp" onclick="enlazar(this)"></img>
-                <p class="w-100">Un agujero en la pared</p>
+
+            <div hidden class="lima">
+                <div class="d-flex justify-content-center align-center">
+                    <img src="image/lima.png" onclick="enlazar(this)"></img>
+                    <p class="w-100">Una lima</p>
+                </div>
             </div>
-            <div class="d-flex justify-content-center align-center">
-                <img src="image/pared.webp" onclick="enlazar(this)"></img>
-                <p class="w-100">Una pared sin agujero</p>
-            </div>
-            <div class="d-flex justify-content-center align-center"> 
-                <img src="image/rejas.png" onclick="enlazar(this)"></img>
-                <p class="w-100">Unas rejas</p>
-            </div>
-            <div class="d-flex justify-content-center align-center">
-                <img src="image/lima.png" onclick="enlazar(this)"></img>
-                <p class="w-100">Una lima</p>
-            </div>
-            <div class="d-flex justify-content-center align-center">
-                <img src="image/pico.png" onclick="enlazar(this)"></img>
-                <p class="w-100">Un pico</p>
+
+            <div hidden class="pico">
+                <div class="d-flex justify-content-center align-center">
+                    <img src="image/pico.png" onclick="enlazar(this)"></img>
+                    <p class="w-100">Un pico</p>
+                </div>
             </div>
 
         </div>
 
-        <div class="linkContainer">
+        <div class="rejas">
+            <div class="d-flex justify-content-center align-center">
+                <img src="image/rejas.png" onclick="enlazar(this)"></img>
+                <p>Unas rejas</p>
+            </div>
+        </div>
+
+        <div hidden class="pared">
+            <div class="d-flex justify-content-center align-center">
+                <img src="image/pared.webp" onclick="enlazar(this)"></img>
+                <p>Una pared</p>
+            </div>
+        </div>
+
+        <div hidden class="agujero">
+            <div class="d-flex justify-content-center align-center">
+                <img src="image/agujero.webp" onclick="enlazar(this)"></img>
+                <p>¡Una salida!</p>
+            </div>
+        </div>
+
+        <div class="gax" onclick="enlazar(this)">
+
+        </div>
+
+        <div hidden class="gax2" onclick="enlazar(this)">
+
+        </div>
+
+        <!-- <div class="linkContainer">
             <a hidden target="_blank" class="finalLink" href="https://"></a>
             <button hidden onclick="completar()">Comprobar</button>
             <a hidden href="index.html" class="resetButton"><button>Reiniciar</button></a>
-        </div>
+        </div> -->
     </main>
 </body>
 
